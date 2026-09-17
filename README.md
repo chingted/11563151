@@ -1,15 +1,8 @@
-#include <iostream>
-using namespace std;
+# 11563151
 
-int sigma(int n) {
-    if (n < 0)
-        throw "n < 0";
-    else if (n <= 1)
-        return n;
-    return n + sigma(n - 1);
-}
+## 解題說明
 
-int main() {
-    int result = sigma(3);
-    cout << result << '\n';
-}
+
+## 解題策略
+
+### 效能分析
