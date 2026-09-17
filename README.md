@@ -1,4 +1,3 @@
-# 11563151
 #include <iostream>
 using namespace std;
 
