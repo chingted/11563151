@@ -1,5 +1,5 @@
-Problem 1：
-(1) 遞迴函數
+## Problem 1：
+##(1) 遞迴函數
 ## 解題說明
 
 
@@ -87,8 +87,13 @@ int main()
     return 0;
 }
 ```
-Problem 2：
+## Problem 2：
+## 解題說明
 
+
+## 解題策略
+
+## 程式製作
 ```cpp
 #include <iostream>
 #include <vector>
