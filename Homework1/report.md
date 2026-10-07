@@ -1,6 +1,7 @@
 Problem 1：
 (1) 遞迴函數
 
+```
 #include <iostream>
 using namespace std;
 
@@ -28,9 +29,9 @@ int main()
 
     return 0;
 }
-
+```
 (2) 非遞迴函數
-
+```
 #include <iostream>
 #include <stack>
 using namespace std;
@@ -79,9 +80,10 @@ int main()
 
     return 0;
 }
-
+```
 Problem 2：
 
+```
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -120,3 +122,4 @@ int main()
 
     return 0;
 }
+```
