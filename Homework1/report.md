@@ -1,11 +1,11 @@
-## Problem 1：
-## (1) 遞迴函數
-# 解題說明
+# Problem 1：
+# (1) 遞迴函數
+## 解題說明
 
 
-# 解題策略
+## 解題策略
 
-# 程式製作
+## 程式製作
 ```cpp
 #include <iostream>
 using namespace std;
@@ -35,7 +35,7 @@ int main()
     return 0;
 }
 ```
-## (2) 非遞迴函數
+# (2) 非遞迴函數
 
 ```cpp
 #include <iostream>
@@ -87,7 +87,7 @@ int main()
     return 0;
 }
 ```
-## Problem 2：
+# Problem 2：
 ## 解題說明
 
 
