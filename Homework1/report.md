@@ -1,7 +1,7 @@
 Problem 1：
 (1) 遞迴函數
 
-```
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -31,7 +31,8 @@ int main()
 }
 ```
 (2) 非遞迴函數
-```
+
+```cpp
 #include <iostream>
 #include <stack>
 using namespace std;
@@ -83,7 +84,7 @@ int main()
 ```
 Problem 2：
 
-```
+```cpp
 #include <iostream>
 #include <vector>
 using namespace std;
