@@ -108,16 +108,17 @@ int main()
 ```
 # Problem 2：
 ### 解題說明
-要找出集合 S 的所有子集合，也就是 Power Set。每一個元素都只有兩種情況，就是「選這個元素」或「不選這個元素」，所以可以使用遞迴的方式，把每一種可能都跑一次。
-這裡也是函式自己再呼叫自己，所以和上課講的 Direct Recursion 是一樣的概念。
+要找出集合 S 的所有子集合，也就是 Power Set。
+我使用遞迴的方式來產生不同大小的子集合，先產生 0 個元素的集合，再依序產生 1 個、2 個到全部元素的集合。
+generate 函式裡面會再呼叫自己，所以和上課講的 Direct Recursion 是一樣的概念。
 
 ### 解題策略
-使用 index 來表示目前處理到集合中的第幾個元素，current 用來存目前已經選到的元素。
-1. 先選擇「不放入目前元素」，遞迴處理下一個元素。
-2. 再選擇「放入目前元素」，把元素加入 current。
-3. 再次遞迴處理下一個元素。
-4. 回到上一層時，使用 pop_back() 把剛剛加入的元素移除。
-5. 當 index == S.size() 時，代表所有元素都處理完，就輸出目前的子集合。
+使用 k 表示目前要產生幾個元素的子集合，current 用來存目前已經選到的元素。
+1. 先從 k = 0 開始，依序產生 0、1、2 到全部元素的子集合。
+2. 使用 start 表示目前可以從集合的哪個位置開始選擇。
+3. 每次把目前的元素放入 current，再遞迴選擇下一個元素。
+4. 當 current.size() == k 時，代表已經選到需要的元素數量，就輸出目前的子集合。
+5. 回到上一層時使用 pop_back() 移除剛剛加入的元素，再繼續選擇其他元素。
 
 ### 程式製作
 ```cpp
@@ -125,9 +126,10 @@ int main()
 #include <vector>
 using namespace std;
 
-void powerSet(vector<char>& S, int index, vector<char>& current)
+void generate(vector<char>& S, int start, int k, vector<char>& current)
 {
-    if (index == S.size())
+    // 如果已經選到 k 個元素，就輸出這個子集合
+    if (current.size() == k)
     {
         cout << "{ ";
 
@@ -138,24 +140,31 @@ void powerSet(vector<char>& S, int index, vector<char>& current)
         return;
     }
 
-    // 不選目前的元素
-    powerSet(S, index + 1, current);
+    // 從 start 開始選擇元素
+    for (int i = start; i < S.size(); i++)
+    {
+        current.push_back(S[i]);          // 選擇目前元素
+        generate(S, i + 1, k, current);  // 遞迴選下一個元素
+        current.pop_back();               // 回到上一層
+    }
+}
 
-    // 選目前的元素
-    current.push_back(S[index]);
+void powerSet(vector<char>& S)
+{
+    vector<char> current;
 
-    powerSet(S, index + 1, current);
-
-    // 回到上一層之前，把元素移除
-    current.pop_back();
+    // 依照子集合大小 0、1、2、3... 產生
+    for (int k = 0; k <= S.size(); k++)
+    {
+        generate(S, 0, k, current);
+    }
 }
 
 int main()
 {
     vector<char> S = {'a', 'b', 'c'};
-    vector<char> current;
 
-    powerSet(S, 0, current);
+    powerSet(S);
 
     return 0;
 }
