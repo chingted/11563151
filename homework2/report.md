@@ -1,4 +1,4 @@
-# Homework 2：Polynomial
+# homework 2：Polynomial
 
 ## 1.解題說明
 
