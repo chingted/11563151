@@ -7,6 +7,7 @@ class Polynomial;
 // 儲存多項式的其中一項
 class Term {
     friend class Polynomial;
+    friend ostream& operator<<(ostream& out, const Polynomial& poly);
 
 private:
     float coef; // 係數
@@ -148,7 +149,7 @@ public:
             }
             else {
                 float c = termArray[i].coef
-                        + poly.termArray[j].coef;
+                    + poly.termArray[j].coef;
 
                 result.appendTerm(c, termArray[i].exp);
 
@@ -187,11 +188,11 @@ public:
 
                 // 係數相乘
                 float c = termArray[i].coef
-                        * poly.termArray[j].coef;
+                    * poly.termArray[j].coef;
 
                 // 指數相加
                 int e = termArray[i].exp
-                      + poly.termArray[j].exp;
+                    + poly.termArray[j].exp;
 
                 result.newTerm(c, e);
             }
@@ -205,8 +206,7 @@ public:
         float result = 0;
 
         for (int i = 0; i < terms; i++) {
-            result += termArray[i].coef
-                    * pow(f, termArray[i].exp);
+            result += termArray[i].coef * static_cast<float>(pow(f, termArray[i].exp));
         }
 
         return result;
