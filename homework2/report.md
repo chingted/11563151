@@ -17,7 +17,7 @@ Eval：將指定的數值代入多項式進行計算。
 Polynomial p;
 cin >> p;
 cout << p;
-```cpp
+```
 
 ### 解題策略
 我使用 Term 類別儲存每一項的係數與指數，再使用動態陣列 termArray 來管理多項式的所有非零項。
