@@ -373,6 +373,16 @@ int main() {
 ```
 ## 3.效能分析
 
+這次程式主要有加法、乘法和代入計算三種功能。
+
+加法 Add()：因為多項式已經按照指數排序，所以只要依序比較兩個多項式的項目，時間複雜度是 (O(m+n))。
+
+乘法 Mult()：使用兩層 for 迴圈，讓兩個多項式的每一項互相相乘，再透過 newTerm() 合併相同指數。因為合併時還需要尋找和移動項目，所以最壞時間複雜度是 (O(m^2n^2))。
+
+代入計算 Eval()：使用一層 for 迴圈，把每一項的計算結果加起來。若把 pow() 視為固定成本運算，時間複雜度是 (O(m))。
+
+其中 (m) 和 (n) 分別代表兩個多項式的非零項數。
+
 ### 時間複雜度
 
 ### 空間複雜度
@@ -400,6 +410,8 @@ Input P: count, then coefficient and exponent for each term
 
 Input Q: count, then coefficient and exponent for each term
 
+輸入
+
 2
 
 1 1
@@ -407,6 +419,8 @@ Input Q: count, then coefficient and exponent for each term
 -1 0
 
 Input x for Eval:
+
+輸入
 
 2
 
