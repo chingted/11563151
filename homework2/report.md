@@ -386,4 +386,13 @@ $$
 Q(x) = x - 1
 $$
 
+Input P: count, then coefficient and exponent for each term
+
+然後我輸入
+
+3
+3 2
+2 1
+1 0
+
 ## 5.申論及開發報告
