@@ -1,4 +1,6 @@
-# homework 2：Polynomial
+# 11563151
+
+**Homework 2：Polynomial**
 
 ## 1.解題說明
 
