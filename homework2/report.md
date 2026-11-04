@@ -7,7 +7,6 @@
 
 每個多項式由多個 Term 組成，每個 Term 包含係數（coef）與指數（exp）。
 Polynomial 類別需要完成:Add,Mult,Eval(float f)
-
 Add：將兩個多項式相加。
 Mult：將兩個多項式相乘。
 Eval：將指定的數值代入多項式進行計算。
