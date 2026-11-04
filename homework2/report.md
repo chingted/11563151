@@ -434,22 +434,27 @@ Input Q: count, then coefficient and exponent for each term
 
 輸入
 
+```text
 2
 
 1 1
 
 -1 0
+```
 
 Input x for Eval:
 
 輸入
 
+```text
 2
+```
 
 這邊將x帶入後
 
 顯示:
 
+```text
 P(x) = 3x^2 + 2x + 1
 
 Q(x) = x - 1
@@ -461,7 +466,7 @@ P * Q = 3x^3 - x^2 - x - 1
 P(2) = 17
 
 Q(2) = 1
-
+```
 
 ## 5.申論及開發報告
 
