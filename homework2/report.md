@@ -6,10 +6,15 @@
 這次作業要求實作一個Polynomial類別，並依題目提供的ADT與私有資料成員來設計程式。
 
 每個多項式由多個 Term 組成，每個 Term 包含係數（coef）與指數（exp）。
+
 Polynomial 類別需要完成:Add,Mult,Eval(float f)
+
 Add：將兩個多項式相加。
+
 Mult：將兩個多項式相乘。
+
 Eval：將指定的數值代入多項式進行計算。
+
 運算子多載：使用 >> 和 << 完成多項式的輸入與輸出。
 
 ```cpp
